@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         primary: '#414141',
         secondary: '#FFCC21',
+        tertiary: '#777777',
+        quaternary: '#2E2E2E',
       },
       maxWidth: {
         ct: '60rem',

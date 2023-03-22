@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/common/header';
 import { inter } from './fonts';
 import './globals.css';
 

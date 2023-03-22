@@ -1,0 +1,23 @@
+.btn-toggle {
+  padding: 3px;
+  gap: 5px;
+}
+
+.btn-toggle span {
+  width: 26px;
+  height: 3px;
+  background-color: #FF963C;
+  transition: all 0.25s linear;
+}
+
+.btn-toggle.active span:nth-child(1){
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.btn-toggle.active span:nth-child(2){
+  width: 0;
+}
+
+.btn-toggle.active span:nth-child(3){
+  transform: rotate(-45deg) translate(5px, -5px);
+}
