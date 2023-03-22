@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     <header className='sticky bg-primary h-16 w-full'>
       <div className='relative flex items-center w-full h-full max-w-ct mx-auto'>
         <Link href='/' className='mr-auto'>
-          <Image src='/images/common/logo.svg' alt='Healthy' width={144} height={64} />
+          <Image src='/images/common/logo.svg' alt='Healthy' width={144} height={64} priority />
         </Link>
         <Navbar />
         <DropdownMenu />

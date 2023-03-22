@@ -1,0 +1,17 @@
+.graph-wrap {
+  aspect-ratio: 589 / 294;
+}
+
+@media (min-width: 640px) {
+  .hero-container {
+    gap: 53px;
+  }
+
+  .thumb-wrap {
+    width: 540px;
+  }
+
+  .graph-wrap {
+    width: 589px;
+  }
+}
