@@ -1,13 +1,17 @@
 import HeroSection from '@/components/top/hero-section';
-import { getTopPageData } from '@/lib/top';
+import MenuSection from '@/components/top/menu-section';
+import { getGroupList, getMenuList, getTopHeroData } from '@/lib/top';
 import { NextPage } from 'next';
 import { use } from 'react';
 
 const TopPage: NextPage = () => {
-  const data = use(getTopPageData());
+  const heroData = use(getTopHeroData());
+  const groupList = use(getGroupList());
+  const menuListData = use(getMenuList());
   return (
     <>
-      <HeroSection data={data.hero} />
+      <HeroSection data={heroData} />
+      <MenuSection groupList={groupList} menuListData={menuListData} />
     </>
   );
 };

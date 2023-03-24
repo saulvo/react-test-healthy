@@ -1,6 +1,8 @@
-export interface IHero {
+export interface ITopHero {
   name: string;
   thumbnail: string;
+  date: string;
+  percent: number;
   chartData: {
     green: {
       month: number;
@@ -13,6 +15,20 @@ export interface IHero {
   };
 }
 
-export interface ITopData {
-  hero: IHero;
+export interface IGroupItem {
+  id: string;
+  name: string;
+  icon: string;
+}
+
+export interface IMenuItem {
+  photo: string;
+  name: string;
+  groupId: string;
+}
+
+export interface IIMenuItemQuery {
+  offset: number;
+  limit: number;
+  groupId: string;
 }

@@ -1,7 +1,27 @@
-import { ITopData } from '@/interfaces/top';
-import data from '@/mock/top-page';
+import { defaultQuery } from '@/constant/top';
+import { IGroupItem, IIMenuItemQuery, IMenuItem, ITopHero } from '@/interfaces/top';
+import { topGroupList, topHeroData, topMenuList } from '@/mock/top-page';
 
-export const getTopPageData = async (): Promise<ITopData> =>
+export const getTopHeroData = async (): Promise<ITopHero> =>
   new Promise((resolve) => {
-    resolve(data);
+    resolve(topHeroData);
+  });
+
+export const getGroupList = async (): Promise<IGroupItem[]> =>
+  new Promise((resolve) => {
+    resolve(topGroupList);
+  });
+
+export const getMenuList = async (query: IIMenuItemQuery = defaultQuery): Promise<{ count: number; rows: IMenuItem[] }> =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      const { groupId, offset, limit } = query;
+      const count = topMenuList.length;
+      if (groupId === '') {
+        resolve({ count, rows: topMenuList.slice(offset, offset + limit) });
+        return;
+      }
+      const data = topMenuList.filter((item) => item.groupId === groupId);
+      resolve({ count, rows: data.slice(offset, offset + limit) });
+    }, 300);
   });

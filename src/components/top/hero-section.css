@@ -1,5 +1,10 @@
+.thumb-wrap {
+  position: relative;
+}
+
 .graph-wrap {
   aspect-ratio: 589 / 294;
+  width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -14,4 +19,8 @@
   .graph-wrap {
     width: 589px;
   }
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 6px #FCA500;
 }
