@@ -16,6 +16,9 @@ module.exports = {
       screens: {
         xs: '480px',
       },
+      padding: {
+        full: '100%',
+      },
     },
   },
   plugins: [],

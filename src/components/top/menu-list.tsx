@@ -24,8 +24,8 @@ const MenuList: React.FC<Props> & { Loading: React.FC } = ({ list }) => {
   return (
     <Container>
       {list.map((item, idx) => (
-        <div key={idx} className='overflow-hidden relative group'>
-          <Image src={item.photo} alt={item.name} width={234} height={234} className='group-hover:scale-110 transition-transform duration-300' />
+        <div key={idx} className='overflow-hidden relative group after:block after:pb-full'>
+          <Image src={item.photo} alt={item.name} fill className='h-full object-cover group-hover:scale-110 transition-transform duration-300' />
           <h3 className='absolute left-0 bottom-0 min-w-[7.5rem] max-w-full px-2 py-[0.296875rem] bg-secondary text-white text-[0.9375rem]'>
             {item.name}
           </h3>
