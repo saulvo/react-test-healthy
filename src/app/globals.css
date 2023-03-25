@@ -11,4 +11,19 @@
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
   }
+
+  .bg-gradient-btn {
+    background: linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%);
+  }
+
+  .grid-group-filter {
+    --cols: 2;
+    grid-template-columns: repeat(var(--cols), minmax(7.25rem, 0));
+  }
+
+  @media (min-width: 640px) {
+    .grid-group-filter {
+      --cols: 4;
+    }
+  }
 }

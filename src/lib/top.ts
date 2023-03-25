@@ -16,12 +16,11 @@ export const getMenuList = async (query: IIMenuItemQuery = defaultQuery): Promis
   new Promise((resolve) => {
     setTimeout(() => {
       const { groupId, offset, limit } = query;
-      const count = topMenuList.length;
       if (groupId === '') {
-        resolve({ count, rows: topMenuList.slice(offset, offset + limit) });
+        resolve({ count: topMenuList.length, rows: topMenuList.slice(offset, offset + limit) });
         return;
       }
       const data = topMenuList.filter((item) => item.groupId === groupId);
-      resolve({ count, rows: data.slice(offset, offset + limit) });
+      resolve({ count: data.length, rows: data.slice(offset, offset + limit) });
     }, 300);
   });

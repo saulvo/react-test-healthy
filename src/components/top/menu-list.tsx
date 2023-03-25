@@ -14,7 +14,7 @@ const Loading: React.FC = () => {
   return (
     <Container>
       {[...new Array(8)].map((_, idx) => (
-        <div key={idx} className='w-[14.625rem] h-[14.625rem] bg-gray-200' />
+        <div key={idx} className='w-full aspect-square bg-gray-200' />
       ))}
     </Container>
   );
@@ -24,8 +24,8 @@ const MenuList: React.FC<Props> & { Loading: React.FC } = ({ list }) => {
   return (
     <Container>
       {list.map((item, idx) => (
-        <div key={idx} className='relative'>
-          <Image src={item.photo} alt={item.name} width={234} height={234} />
+        <div key={idx} className='overflow-hidden relative group'>
+          <Image src={item.photo} alt={item.name} width={234} height={234} className='group-hover:scale-110 transition-transform duration-300' />
           <h3 className='absolute left-0 bottom-0 min-w-[7.5rem] max-w-full px-2 py-[0.296875rem] bg-secondary text-white text-[0.9375rem]'>
             {item.name}
           </h3>

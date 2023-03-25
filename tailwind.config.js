@@ -11,10 +11,11 @@ module.exports = {
       },
       maxWidth: {
         ct: '60rem',
+        p95: '95%',
       },
       screens: {
-        'xs': '480px',
-      }
+        xs: '480px',
+      },
     },
   },
   plugins: [],
