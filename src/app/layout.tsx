@@ -1,3 +1,4 @@
+import BackTop from '@/components/common/back-top';
 import Footer from '@/components/common/footer';
 import Header from '@/components/common/header';
 import { inter } from './fonts';
@@ -13,6 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='jp' className={`${inter.className} scroll-smooth scroll-pt-16`}>
       <body>
         <Header />
+        <BackTop />
         {children}
         <Footer />
       </body>
