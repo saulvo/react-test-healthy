@@ -15,11 +15,11 @@ interface Props {
       backgroundColor: string;
     }[];
   };
+  aspectRatio: number;
 }
 
 const options: ChartOptions<'line'> = {
   responsive: true,
-  aspectRatio: 589 / 294,
   scales: {
     x: {
       border: {
@@ -54,8 +54,8 @@ const options: ChartOptions<'line'> = {
   },
 };
 
-const LineChart: React.FC<Props> = ({ data }) => {
-  return <Line options={options} data={data} />;
+const LineChart: React.FC<Props> = ({ data, aspectRatio }) => {
+  return <Line options={{ ...options, aspectRatio }} data={data} width={'100%'} />;
 };
 
 export default LineChart;

@@ -1,6 +1,6 @@
 import { defaultQuery } from '@/constant/top';
-import { IGroupItem, IIMenuItemQuery, IMenuItem, ITopHero } from '@/interfaces/top';
-import { topGroupList, topHeroData, topMenuList } from '@/mock/top-page';
+import { IGroupItem, IIMenuItemQuery, IMealHistory, ITopHero } from '@/interfaces/top';
+import { topGroupList, topHeroData, mealHistory } from '@/mock/top';
 
 export const getTopHeroData = async (): Promise<ITopHero> =>
   new Promise((resolve) => {
@@ -12,15 +12,13 @@ export const getGroupList = async (): Promise<IGroupItem[]> =>
     resolve(topGroupList);
   });
 
-export const getMenuList = async (query: IIMenuItemQuery = defaultQuery): Promise<{ count: number; rows: IMenuItem[] }> =>
+export const getMealHistory = async (query: IIMenuItemQuery = defaultQuery): Promise<{ count: number; rows: IMealHistory[] }> =>
   new Promise((resolve) => {
-    setTimeout(() => {
-      const { groupId, offset, limit } = query;
-      if (groupId === '') {
-        resolve({ count: topMenuList.length, rows: topMenuList.slice(offset, offset + limit) });
-        return;
-      }
-      const data = topMenuList.filter((item) => item.groupId === groupId);
-      resolve({ count: data.length, rows: data.slice(offset, offset + limit) });
-    }, 300);
+    const { groupId, offset, limit } = query;
+    if (groupId === '') {
+      resolve({ count: mealHistory.length, rows: mealHistory.slice(offset, offset + limit) });
+      return;
+    }
+    const data = mealHistory.filter((item) => item.groupId === groupId);
+    resolve({ count: data.length, rows: data.slice(offset, offset + limit) });
   });

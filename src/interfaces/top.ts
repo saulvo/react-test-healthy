@@ -1,15 +1,14 @@
 export interface ITopHero {
   name: string;
   thumbnail: string;
-  date: string;
-  percent: number;
-  chartData: {
-    green: {
-      month: number;
+  achievementRate: number;
+  record: {
+    weight: {
+      label: string;
       value: number;
     }[];
-    yellow: {
-      month: number;
+    fat: {
+      label: string;
       value: number;
     }[];
   };
@@ -21,7 +20,7 @@ export interface IGroupItem {
   icon: string;
 }
 
-export interface IMenuItem {
+export interface IMealHistory {
   photo: string;
   name: string;
   groupId: string;

@@ -26,4 +26,19 @@
       --cols: 4;
     }
   }
+
+  .scrollbar-y-sm::-webkit-scrollbar {
+    border-radius: 3px;
+    width: 6px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #777;
+    border-radius: 3px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #FFCC21;
+    border-radius: 3px;
+  }
 }

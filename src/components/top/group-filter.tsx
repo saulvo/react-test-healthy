@@ -13,7 +13,7 @@ const GroupFilter: React.FC<Props> = ({ activeGroupId, groupList, onClick }) => 
     <div className='grid-group-filter grid justify-center gap-6 md:gap-20 py-6 '>
       {groupList.map((group) => (
         <div key={group.id} onClick={() => onClick(group.id)}>
-          <Hexagon isActive={activeGroupId === group.id} icon='/images/top/icon-knife.svg' name='Morning' />
+          <Hexagon isActive={activeGroupId === group.id} icon={group.icon} name={group.name} />
         </div>
       ))}
     </div>

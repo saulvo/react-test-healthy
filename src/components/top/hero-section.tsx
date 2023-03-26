@@ -1,4 +1,5 @@
 import { ITopHero } from '@/interfaces/top';
+import { getCurrentDate } from '@/utils/common';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import React from 'react';
@@ -20,7 +21,7 @@ const HeroSection: React.FC<Props> = ({ data }) => {
             <path
               stroke='#FC7400'
               strokeWidth='1'
-              strokeDasharray={data.percent}
+              strokeDasharray={data.achievementRate}
               strokeLinecap='round'
               fill='none'
               d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831'
@@ -29,7 +30,7 @@ const HeroSection: React.FC<Props> = ({ data }) => {
             <path
               stroke='white'
               strokeWidth='1'
-              strokeDasharray={data.percent}
+              strokeDasharray={data.achievementRate}
               strokeLinecap='round'
               fill='none'
               d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831'
@@ -39,24 +40,25 @@ const HeroSection: React.FC<Props> = ({ data }) => {
             </filter>
           </svg>
           <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-shadow'>
-            <span className='text-lg mr-1'>{data.date}</span>
-            <span className='text-[1.5625rem]'>{data.percent}%</span>
+            <span className='text-lg mr-1'>{getCurrentDate()}</span>
+            <span className='text-[1.5625rem]'>{data.achievementRate}%</span>
           </div>
         </div>
         <div className='graph-wrap'>
           <LineChart
+            aspectRatio={589 / 294}
             data={{
-              labels: data.chartData.green.map((item) => `${item.month}月`),
+              labels: data.record.weight.map(({ label }) => label),
               datasets: [
                 {
-                  label: 'green',
-                  data: data.chartData.green.map((x) => x.value),
+                  label: 'weight',
+                  data: data.record.weight.map((x) => x.value),
                   borderColor: '#8FE9D0',
                   backgroundColor: '#8FE9D0',
                 },
                 {
-                  label: 'yellow',
-                  data: data.chartData.yellow.map((x) => x.value),
+                  label: 'fat',
+                  data: data.record.fat.map((x) => x.value),
                   borderColor: '#FFCC21',
                   backgroundColor: '#FFCC21',
                 },
