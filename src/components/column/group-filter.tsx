@@ -6,9 +6,9 @@ const GroupFilterItem: React.FC<GroupFilterItemProps> = ({ id, name, desc, isAct
     key={id}
     onClick={onClick}
     className={`text-white px-2 pt-6 pb-5.5 text-center cursor-pointer transition-colors ${
-      isActive ? 'bg-quaternary/80' : 'bg-quaternary hover:bg-quaternary/80'
+      isActive ? 'bg-dark/600/80' : 'bg-dark/600 hover:bg-dark/600/80'
     }`}>
-    <h2 className='text-secondary text-22'>{name}</h2>
+    <h2 className='text-primary/300 text-22'>{name}</h2>
     <div className='w-14 h-[1px] mt-2.5 mb-2 mx-auto bg-white' />
     <p className='text-lg'>{desc}</p>
   </div>

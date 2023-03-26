@@ -8,7 +8,7 @@ interface Props {
 }
 
 const classes = (defaultClass: string, active: boolean) => {
-  return [defaultClass, active ? 'bg-secondary text-white' : 'bg-white text-secondary'].join(' ');
+  return [defaultClass, active ? 'bg-primary/300 text-white' : 'bg-white text-primary/300'].join(' ');
 };
 const RecordFilter: React.FC<Props> = ({ value, options, onChange }) => {
   return (

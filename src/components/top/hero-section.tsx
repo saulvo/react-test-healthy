@@ -13,7 +13,7 @@ interface Props {
 
 const HeroSection: React.FC<Props> = ({ data }) => {
   return (
-    <div className='bg-quaternary'>
+    <div className='bg-dark/600'>
       <div className='hero-container flex flex-wrap flex-col sm:flex-row items-center gap-2 justify-center w-full max-w-screen-xl mx-auto'>
         <div className='thumb-wrap'>
           <Image src={data.thumbnail} alt={data.name} width={540} height={312} quality={100} priority />

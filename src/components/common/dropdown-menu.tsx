@@ -26,7 +26,7 @@ const DropdownMenu: React.FC = () => {
     <div ref={refContainer}>
       <nav
         className={classes(
-          `dropdown-menu overflow-hidden absolute top-full right-0 flex flex-col w-full max-w-[17.5rem] bg-tertiary transition-all duration-300 ${
+          `dropdown-menu overflow-hidden absolute top-full right-0 flex flex-col w-full max-w-[17.5rem] bg-dark/400 transition-all duration-300 ${
             activeNav ? '' : 'opacity-0 invisible translate-y-4'
           }`,
         )}>
@@ -37,8 +37,8 @@ const DropdownMenu: React.FC = () => {
             onClick={() => {
               setActiveNav((prev) => !prev);
             }}
-            className='flex gap-2 py-[1.4375rem] pl-[2rem] items-center text-white group text-lg border-b border-quaternary/25 hover:bg-quaternary/25'
-            activeClassName='bg-quaternary/25'>
+            className='flex gap-2 py-[1.4375rem] pl-[2rem] items-center text-white group text-lg border-b border-dark/600/25 hover:bg-dark/600/25'
+            activeClassName='bg-dark/600/25'>
             {item.name}
           </NavLink>
         ))}

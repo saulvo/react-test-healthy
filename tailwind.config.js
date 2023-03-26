@@ -9,11 +9,13 @@ module.exports = {
         22: '1.375rem',
       },
       colors: {
-        primary: '#414141',
-        secondary: '#FFCC21',
-        tertiary: '#777777',
-        quaternary: '#2E2E2E',
-        orange: '#FF963C',
+        'primary/300': '#FFCC21',
+        'primary/400': '#FF963C',
+        'primary/500': '#EA6C00',
+        'secondary/300': '#8FE9D0',
+        'dark/400': '#777777',
+        'dark/500': '#414141',
+        'dark/600': '#2E2E2E',
       },
       maxWidth: {
         ct: '60rem',

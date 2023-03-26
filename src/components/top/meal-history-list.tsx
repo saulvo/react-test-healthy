@@ -5,7 +5,7 @@ import React from 'react';
 const MealHistoryItem: React.FC<IMealHistory> = ({ name, photo }) => (
   <div className='overflow-hidden relative group after:block after:pb-full'>
     <Image src={photo} alt={name} fill className='h-full object-cover group-hover:scale-110 transition-transform duration-300' />
-    <h3 className='absolute left-0 bottom-0 min-w-[7.5rem] max-w-full px-2 py-[0.296875rem] bg-secondary text-white text-15'>{name}</h3>
+    <h3 className='absolute left-0 bottom-0 min-w-[7.5rem] max-w-full px-2 py-[0.296875rem] bg-primary/300 text-white text-15'>{name}</h3>
   </div>
 );
 

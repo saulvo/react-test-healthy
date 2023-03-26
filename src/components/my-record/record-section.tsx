@@ -30,7 +30,7 @@ const RecordSection: React.FC<Props> = ({ initialRecordData }) => {
   }, [value]);
 
   return (
-    <section id='body-record' className='bg-primary py-4 px-6 text-white mb-14'>
+    <section id='body-record' className='bg-dark/500 py-4 px-6 text-white mb-14'>
       <div className='flex gap-8'>
         <h2 className='text-15'>
           BODY

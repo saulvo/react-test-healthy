@@ -9,7 +9,7 @@ interface Props {
 
 const ExerciseSection: React.FC<Props> = ({ data }) => {
   return (
-    <section id='my-exercise' className='bg-primary py-4 px-6 text-white mb-14'>
+    <section id='my-exercise' className='bg-dark/500 py-4 px-6 text-white mb-14'>
       <div className='flex gap-8'>
         <h2 className='text-15'>
           MY
