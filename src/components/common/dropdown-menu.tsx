@@ -1,8 +1,8 @@
 'use client';
 import { dropdownMenu } from '@/constant/nav';
 import { classes } from '@/utils/common';
-import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
+import NavLink from './nav-link';
 import ToggleButton from './toggle-button';
 
 const DropdownMenu: React.FC = () => {
@@ -31,15 +31,16 @@ const DropdownMenu: React.FC = () => {
           }`,
         )}>
         {dropdownMenu.map((item, idx) => (
-          <Link
+          <NavLink
             href={item.link}
             key={idx}
             onClick={() => {
               setActiveNav((prev) => !prev);
             }}
-            className='flex gap-2 py-[1.4375rem] pl-[2rem] items-center text-white group text-lg border-b border-quaternary/25 hover:bg-quaternary/25'>
+            className='flex gap-2 py-[1.4375rem] pl-[2rem] items-center text-white group text-lg border-b border-quaternary/25 hover:bg-quaternary/25'
+            activeClassName='bg-quaternary/25'>
             {item.name}
-          </Link>
+          </NavLink>
         ))}
       </nav>
       <ToggleButton

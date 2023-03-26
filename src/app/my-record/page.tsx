@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   title: 'My Record',
 };
 
+export const revalidate = 60;
+
 const RecordPage: NextPage = () => {
   const recordDay = use(getRecord('day'));
   const exerciseList = use(getExerciseList());

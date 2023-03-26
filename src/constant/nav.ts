@@ -6,20 +6,21 @@ export const nav = [
   },
   {
     name: 'チャレンジ',
-    link: '/challenge',
+    link: '#',
     icon: '/images/common/challenge.svg',
   },
   {
     name: 'お知らせ',
-    link: '/notice',
+    link: '#',
     icon: '/images/common/notice.svg',
+    noti: true,
   },
 ];
 
 export const dropdownMenu = [
   {
     name: '自分の記録',
-    link: '#',
+    link: '/my-record',
   },
   {
     name: '体重グラフ',
@@ -35,7 +36,7 @@ export const dropdownMenu = [
   },
   {
     name: 'コラム一覧',
-    link: '#',
+    link: '/column',
   },
   {
     name: '設定',

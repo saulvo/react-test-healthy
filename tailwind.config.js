@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
+        10: '0.625rem',
         15: '0.9375rem',
         22: '1.375rem',
       },
@@ -21,8 +22,12 @@ module.exports = {
       screens: {
         xs: '480px',
       },
+      margin: {
+        2.5: '0.625rem',
+      },
       padding: {
         full: '100%',
+        5.5: '1.375rem',
       },
     },
   },

@@ -1,5 +1,5 @@
 import { IGroupItem } from '@/interfaces/top';
-import React, { SetStateAction } from 'react';
+import React from 'react';
 import Hexagon from '../common/hexagon';
 
 interface Props {

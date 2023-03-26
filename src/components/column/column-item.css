@@ -1,0 +1,5 @@
+.column-thumb:after {
+  content: '';
+  display: block;
+  padding-bottom: calc(145 * 100%/234);
+}
