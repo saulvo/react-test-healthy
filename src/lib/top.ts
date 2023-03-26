@@ -1,6 +1,7 @@
-import { defaultQuery } from '@/constant/top';
-import { IGroupItem, IIMenuItemQuery, IMealHistory, ITopHero } from '@/interfaces/top';
-import { topGroupList, topHeroData, mealHistory } from '@/mock/top';
+import { defaultQueryList } from '@/constant/common';
+import { IQueryList } from '@/interfaces/common';
+import { IGroupItem, IMealHistory, ITopHero } from '@/interfaces/top';
+import { mealHistory, topGroupList, topHeroData } from '@/mock/top';
 
 export const getTopHeroData = async (): Promise<ITopHero> =>
   new Promise((resolve) => {
@@ -12,7 +13,7 @@ export const getGroupList = async (): Promise<IGroupItem[]> =>
     resolve(topGroupList);
   });
 
-export const getMealHistory = async (query: IIMenuItemQuery = defaultQuery): Promise<{ count: number; rows: IMealHistory[] }> =>
+export const getMealHistory = async (query: IQueryList = defaultQueryList): Promise<{ count: number; rows: IMealHistory[] }> =>
   new Promise((resolve) => {
     const { groupId, offset, limit } = query;
     if (groupId === '') {

@@ -16,7 +16,7 @@ const TopPage: NextPage = () => {
   return (
     <main>
       <HeroSection data={heroData} />
-      <MenuSection groupList={groupList} mealHistoryData={mealHistoryData} />
+      <MenuSection groupList={groupList} data={mealHistoryData} />
     </main>
   );
 };

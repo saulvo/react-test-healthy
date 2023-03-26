@@ -25,9 +25,3 @@ export interface IMealHistory {
   name: string;
   groupId: string;
 }
-
-export interface IIMenuItemQuery {
-  offset: number;
-  limit: number;
-  groupId: string;
-}
