@@ -35,7 +35,7 @@ const DropdownMenu: React.FC = () => {
             href={item.link}
             key={idx}
             onClick={() => {
-              setActiveNav((prev) => !prev);
+              if (item.link !== '#') setActiveNav((prev) => !prev);
             }}
             className='flex gap-2 py-[1.4375rem] pl-[2rem] items-center text-white group text-lg border-b border-dark/600/25 hover:bg-dark/600/25'
             activeClassName='bg-dark/600/25'>

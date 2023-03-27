@@ -12,12 +12,7 @@ const NavLink: React.FC<Props> = ({ className, activeClassName = '', children, .
   const segment = useSelectedLayoutSegment();
   const isActive = `/${segment}` === props.href;
   return (
-    <Link
-      {...props}
-      className={`${className} ${isActive ? activeClassName : ''}`}
-      onClick={(e) => {
-        if (props.href === '#') e.preventDefault();
-      }}>
+    <Link {...props} className={`${className} ${isActive ? activeClassName : ''}`}>
       {children}
     </Link>
   );
