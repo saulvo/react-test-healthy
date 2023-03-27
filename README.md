@@ -1,38 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Healthy App - Interview Test Project
+[https://react-test-healthy.vercel.app/](https://react-test-healthy.vercel.app/)
+![](./public/cover.png)
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## How to use
+- Clone project:
+```shell
+$ git clone https://github.com/sonvt-fe/react-test-healthy.git
+$ cd react-test-healthy
+```
+- Connect to the API by modifying the files in the [lib](./src/lib/) directory to fetch data
+```shell
+# install packages
+$ npm install
+# starts the application in development mode
+$ npm run dev
+# creates an optimized production build
+$ npm run build
+# starts the application in production mode
+$ npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Stack
+- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [Chart.js](https://react-chartjs-2.js.org/) - Simple yet flexible JavaScript charting library for the modern web.
+- [Tailwind css](https://tailwindcss.com/) - An open source CSS framework.
+- [Typescript](https://www.typescriptlang.org/) TypeScript is a free and open source high-level programming language
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
+```
+$PROJECT_ROOT
+│   # Static files for images
+├── public
+│   # src
+└── src
+    │   # Page files
+    ├── app
+    │   # React component files
+    ├── components
+    │   # list hardcode data
+    ├── constant
+    │   # custom hooks
+    ├── hooks
+    │   # define interfaces
+    ├── interfaces
+    │   #Non-react modules
+    ├── lib
+    │   # fake data
+    ├── mock
+    │   #  storing all utility functions
+    └── utils
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
